@@ -45,6 +45,7 @@ Partial Class Form1
         Me.inputBox1.Name = "inputBox1"
         Me.inputBox1.Size = New System.Drawing.Size(78, 20)
         Me.inputBox1.TabIndex = 0
+        Me.inputBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'inputBox2
         '
@@ -52,6 +53,7 @@ Partial Class Form1
         Me.inputBox2.Name = "inputBox2"
         Me.inputBox2.Size = New System.Drawing.Size(78, 20)
         Me.inputBox2.TabIndex = 1
+        Me.inputBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'inputBox3
         '
@@ -59,6 +61,7 @@ Partial Class Form1
         Me.inputBox3.Name = "inputBox3"
         Me.inputBox3.Size = New System.Drawing.Size(78, 20)
         Me.inputBox3.TabIndex = 3
+        Me.inputBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'inputBox4
         '
@@ -66,6 +69,7 @@ Partial Class Form1
         Me.inputBox4.Name = "inputBox4"
         Me.inputBox4.Size = New System.Drawing.Size(78, 20)
         Me.inputBox4.TabIndex = 2
+        Me.inputBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'inputBox5
         '
@@ -73,6 +77,7 @@ Partial Class Form1
         Me.inputBox5.Name = "inputBox5"
         Me.inputBox5.Size = New System.Drawing.Size(78, 20)
         Me.inputBox5.TabIndex = 4
+        Me.inputBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'Label1
         '
