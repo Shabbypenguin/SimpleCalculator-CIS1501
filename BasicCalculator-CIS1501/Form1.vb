@@ -1,22 +1,47 @@
 ﻿Public Class Form1
-    Private Sub inputBox1_TextChanged(sender As Object, e As EventArgs) Handles inputBox1.TextChanged
-
+    Private Sub inputBox1_LostFocus(sender As Object, e As EventArgs) Handles inputBox1.LostFocus
+        If Not IsNumeric(inputBox1.Text) Then
+            MessageBox.Show("Please enter in a number")
+            inputBox1.Text = ""
+        Else
+            inputBox1.Text = Int(inputBox1.Text)
+        End If
     End Sub
 
-    Private Sub inputBox2_TextChanged(sender As Object, e As EventArgs) Handles inputBox2.TextChanged
-
+    Private Sub inputBox2_LostFocus(sender As Object, e As EventArgs) Handles inputBox2.LostFocus
+        If Not IsNumeric(inputBox2.Text) Then
+            MessageBox.Show("Please enter in a number")
+            inputBox2.Text = ""
+        Else
+            inputBox2.Text = Int(inputBox2.Text)
+        End If
     End Sub
 
-    Private Sub inputBox4_TextChanged(sender As Object, e As EventArgs) Handles inputBox4.TextChanged
-
+    Private Sub inputBox3_LostFocus(sender As Object, e As EventArgs) Handles inputBox3.LostFocus
+        If Not IsNumeric(inputBox3.Text) Then
+            MessageBox.Show("Please enter in a number")
+            inputBox3.Text = ""
+        Else
+            inputBox3.Text = Int(inputBox3.Text)
+        End If
     End Sub
 
-    Private Sub inputBox3_TextChanged(sender As Object, e As EventArgs) Handles inputBox3.TextChanged
-
+    Private Sub inputBox4_LostFocus(sender As Object, e As EventArgs) Handles inputBox4.LostFocus
+        If Not IsNumeric(inputBox4.Text) Then
+            MessageBox.Show("Please enter in a number")
+            inputBox4.Text = ""
+        Else
+            inputBox4.Text = Int(inputBox4.Text)
+        End If
     End Sub
 
-    Private Sub inputBox5_TextChanged(sender As Object, e As EventArgs) Handles inputBox5.TextChanged
-
+    Private Sub inputBox5_LostFocus(sender As Object, e As EventArgs) Handles inputBox5.LostFocus
+        If Not IsNumeric(inputBox5.Text) Then
+            MessageBox.Show("Please enter in a number")
+            inputBox5.Text = ""
+        Else
+            inputBox5.Text = Int(inputBox5.Text)
+        End If
     End Sub
 
     Private Sub resetButton_Click(sender As Object, e As EventArgs) Handles resetButton.Click
