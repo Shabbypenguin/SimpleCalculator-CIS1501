@@ -176,6 +176,7 @@ Partial Class Form1
         'additionRadioButton
         '
         Me.additionRadioButton.AutoSize = True
+        Me.additionRadioButton.Checked = True
         Me.additionRadioButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.additionRadioButton.Location = New System.Drawing.Point(180, 82)
         Me.additionRadioButton.Name = "additionRadioButton"
@@ -223,6 +224,7 @@ Partial Class Form1
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "Form1"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Simple Calculator"
         Me.ResumeLayout(False)
         Me.PerformLayout()

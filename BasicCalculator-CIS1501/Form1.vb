@@ -48,14 +48,15 @@
         For i As Long = 1 To 5
             Controls.Item("inputBox" & i).Text = ""
         Next
+        outputBox.Text = ""
     End Sub
 
     Private Sub exitButton_Click(sender As Object, e As EventArgs) Handles exitButton.Click
         Dim i As Integer
         i = 1
-        MsgBox("This program will close in 10 seconds.", MsgBoxStyle.OkOnly)
+        MsgBox("This program will close in a few seconds.", MsgBoxStyle.OkOnly)
         Do Until i = 10
-            Threading.Thread.Sleep(1000)
+            Threading.Thread.Sleep(500)
             i += 1
         Loop
         Application.Exit()
@@ -65,10 +66,18 @@
         Dim i As Integer
         Dim subTotal As Integer
         i = 1
-        Do While i < 6
-            subTotal += (Controls("inputBox" & i).Text)
-            i += 1
-        Loop
+        If additionRadioButton.Checked Then
+            Do While i < 6
+                subTotal += (Controls("inputBox" & i).Text)
+                i += 1
+            Loop
+        ElseIf multiplcationRadioButton.Checked Then
+            subTotal = 1
+            Do While i < 6
+                subTotal *= (Controls("inputBox" & i).Text)
+                i += 1
+            Loop
+        End If
         outputBox.Text = subTotal.ToString
     End Sub
 End Class
