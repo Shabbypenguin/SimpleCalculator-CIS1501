@@ -46,6 +46,7 @@
 
     Private Sub resetButton_Click(sender As Object, e As EventArgs) Handles resetButton.Click
         For i As Long = 1 To 5
+            'we use a variable to condense the code of emptying each text box
             Controls.Item("inputBox" & i).Text = ""
         Next
         outputBox.Text = ""
@@ -54,11 +55,14 @@
     Private Sub exitButton_Click(sender As Object, e As EventArgs) Handles exitButton.Click
         Dim i As Integer
         i = 1
+        'I prompt the user the program will close
         MsgBox("This program will close in a few seconds.", MsgBoxStyle.OkOnly)
         Do Until i = 10
+            ' I start a loop for 10 "loops" that sleeps for 500 milliseconds
             Threading.Thread.Sleep(500)
             i += 1
         Loop
+        'After it finishes looping I exit the program
         Application.Exit()
     End Sub
 
@@ -66,11 +70,16 @@
         Dim i As Integer
         Dim subTotal As Long
         i = 1
+        'I check to see if its going addition or multiplication
         If additionRadioButton.Checked Then
+            'I start my loop to cycle through the input boxes
             Do While i < 6
+                'I check if the input box is empty, if it is then add 1 to the loop counter so it gets skipped
                 If (Controls("inputBox" & i).Text) = String.Empty Then
+                    'If we try to add/multiply the empty box it causes a crash so we skip it
                     i += 1
                 Else
+                    'this adds inputbox# to the subtotal. by using a variable we can condense the code instead of having 5 lines of each textbox being added
                     subTotal += (Controls("inputBox" & i).Text)
                     i += 1
                 End If
@@ -86,6 +95,7 @@
                 End If
             Loop
         End If
+        'now that the loop has run we output the total to the output box
         outputBox.Text = subTotal.ToString
     End Sub
 End Class
