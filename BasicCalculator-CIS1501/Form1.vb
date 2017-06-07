@@ -45,19 +45,30 @@
     End Sub
 
     Private Sub resetButton_Click(sender As Object, e As EventArgs) Handles resetButton.Click
-        inputBox1.Text = ""
-        inputBox2.Text = ""
-        inputBox3.Text = ""
-        inputBox4.Text = ""
-        inputBox5.Text = ""
-        outputBox.Text = ""
+        For i As Long = 1 To 5
+            Controls.Item("inputBox" & i).Text = ""
+        Next
     End Sub
 
     Private Sub exitButton_Click(sender As Object, e As EventArgs) Handles exitButton.Click
+        Dim i As Integer
+        i = 1
+        MsgBox("This program will close in 10 seconds.", MsgBoxStyle.OkOnly)
+        Do Until i = 10
+            Threading.Thread.Sleep(1000)
+            i += 1
+        Loop
         Application.Exit()
     End Sub
 
     Private Sub calculateButton_Click(sender As Object, e As EventArgs) Handles calculateButton.Click
-
+        Dim i As Integer
+        Dim subTotal As Integer
+        i = 1
+        Do While i < 6
+            subTotal += (Controls("inputBox" & i).Text)
+            i += 1
+        Loop
+        outputBox.Text = subTotal.ToString
     End Sub
 End Class

@@ -37,6 +37,8 @@ Partial Class Form1
         Me.calculateButton = New System.Windows.Forms.Button()
         Me.resetButton = New System.Windows.Forms.Button()
         Me.exitButton = New System.Windows.Forms.Button()
+        Me.additionRadioButton = New System.Windows.Forms.RadioButton()
+        Me.multiplcationRadioButton = New System.Windows.Forms.RadioButton()
         Me.SuspendLayout()
         '
         'inputBox1
@@ -127,10 +129,10 @@ Partial Class Form1
         'outputBox
         '
         Me.outputBox.BackColor = System.Drawing.SystemColors.AppWorkspace
-        Me.outputBox.Location = New System.Drawing.Point(163, 21)
+        Me.outputBox.Location = New System.Drawing.Point(149, 21)
         Me.outputBox.Name = "outputBox"
         Me.outputBox.ReadOnly = True
-        Me.outputBox.Size = New System.Drawing.Size(77, 20)
+        Me.outputBox.Size = New System.Drawing.Size(91, 20)
         Me.outputBox.TabIndex = 10
         Me.outputBox.TabStop = False
         Me.outputBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -171,12 +173,38 @@ Partial Class Form1
         Me.exitButton.Text = "E&xit"
         Me.exitButton.UseVisualStyleBackColor = True
         '
+        'additionRadioButton
+        '
+        Me.additionRadioButton.AutoSize = True
+        Me.additionRadioButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.additionRadioButton.Location = New System.Drawing.Point(180, 82)
+        Me.additionRadioButton.Name = "additionRadioButton"
+        Me.additionRadioButton.Size = New System.Drawing.Size(33, 19)
+        Me.additionRadioButton.TabIndex = 12
+        Me.additionRadioButton.TabStop = True
+        Me.additionRadioButton.Text = "+"
+        Me.additionRadioButton.UseVisualStyleBackColor = True
+        '
+        'multiplcationRadioButton
+        '
+        Me.multiplcationRadioButton.AutoSize = True
+        Me.multiplcationRadioButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.multiplcationRadioButton.Location = New System.Drawing.Point(180, 105)
+        Me.multiplcationRadioButton.Name = "multiplcationRadioButton"
+        Me.multiplcationRadioButton.Size = New System.Drawing.Size(32, 19)
+        Me.multiplcationRadioButton.TabIndex = 14
+        Me.multiplcationRadioButton.TabStop = True
+        Me.multiplcationRadioButton.Text = "x"
+        Me.multiplcationRadioButton.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.ClientSize = New System.Drawing.Size(250, 256)
+        Me.Controls.Add(Me.multiplcationRadioButton)
+        Me.Controls.Add(Me.additionRadioButton)
         Me.Controls.Add(Me.exitButton)
         Me.Controls.Add(Me.resetButton)
         Me.Controls.Add(Me.calculateButton)
@@ -216,4 +244,6 @@ Partial Class Form1
     Friend WithEvents calculateButton As Button
     Friend WithEvents resetButton As Button
     Friend WithEvents exitButton As Button
+    Friend WithEvents additionRadioButton As RadioButton
+    Friend WithEvents multiplcationRadioButton As RadioButton
 End Class
