@@ -64,7 +64,7 @@
 
     Private Sub calculateButton_Click(sender As Object, e As EventArgs) Handles calculateButton.Click
         Dim i As Integer
-        Dim subTotal As Integer
+        Dim subTotal As Long
         i = 1
         If additionRadioButton.Checked Then
             Do While i < 6
