@@ -68,14 +68,22 @@
         i = 1
         If additionRadioButton.Checked Then
             Do While i < 6
-                subTotal += (Controls("inputBox" & i).Text)
-                i += 1
+                If (Controls("inputBox" & i).Text) = String.Empty Then
+                    i += 1
+                Else
+                    subTotal += (Controls("inputBox" & i).Text)
+                    i += 1
+                End If
             Loop
         ElseIf multiplcationRadioButton.Checked Then
             subTotal = 1
             Do While i < 6
-                subTotal *= (Controls("inputBox" & i).Text)
-                i += 1
+                If (Controls("inputBox" & i).Text) = String.Empty Then
+                    i += 1
+                Else
+                    subTotal *= (Controls("inputBox" & i).Text)
+                    i += 1
+                End If
             Loop
         End If
         outputBox.Text = subTotal.ToString
